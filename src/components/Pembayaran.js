@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./Pembayaran.css";
 import { useStateVal } from "../context/context";
 import COutProduct from "./COutProduct";
-import CurrencyFormat from "react-currency-format"; //supporting stripe
+// import CurrencyFormat from "react-currency-format"; //supporting stripe
 import { totalHargaCart } from "../context/reducer"; //supporting stripe
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -142,14 +142,8 @@ function Pembayaran() {
             <form onSubmit={submitHandler}>
               <CardElement onChange={changeHandler} />
               <div className="bayar__harga">
-                <CurrencyFormat
-                  renderText={(value) => <h3>Total Order = {value}</h3>}
-                  decimalScale={2}
-                  value={totalHargaCart(cart)}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"Rp"}
-                />
+                <h3>Total Order = {totalHargaCart(cart)}</h3>
+                  
                 <button disabled={locked || proses || berhasil}>
                   {" "}
                   {proses ? <p>Processing</p> : "Buy Now!"}{" "}
