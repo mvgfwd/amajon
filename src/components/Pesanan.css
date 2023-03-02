@@ -1,0 +1,27 @@
+.pesanan {
+  border: 1px solid #ccc;
+  width: 60vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.pesanan__title {
+  text-align: center;
+  margin: auto;
+  padding: 2rem;
+  background-color: #ccc;
+}
+
+.pesanan__general {
+  background-color: #ccc;
+}
+
+.pesanan__detail {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}

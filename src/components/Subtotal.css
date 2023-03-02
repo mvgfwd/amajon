@@ -1,0 +1,30 @@
+.subtot {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 100px;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border: 1px solid #aaa;
+  padding: 18px;
+  border-radius: 6px;
+}
+
+.subtot__voucher {
+  display: flex;
+  align-items: center;
+}
+
+.subtot__voucher input {
+  margin-right: 5px;
+}
+
+.subtot button {
+  background-color: #ff9b00;
+  height: 30px;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #a88734 #846a28 #9c7e31;
+  margin-top: 9px;
+}

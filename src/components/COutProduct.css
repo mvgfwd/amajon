@@ -1,0 +1,40 @@
+.coutproduct {
+  display: flex;
+  width: 95%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.coutproduct__gambar {
+  /* height: 188px; */
+  width: 128px;
+  object-fit: contain;
+}
+
+.coutproduct__rating {
+  display: flex;
+}
+
+.coutproduct__desc {
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coutproduct__desc button {
+  color: #111;
+  margin-top: 9px;
+  background-color: #ff9b00;
+  border-color: #a88734 #846a28 #9c7e31;
+  border: 1px solid;
+  width: fit-content;
+}
+
+.coutproduct__judul {
+  font-weight: 700;
+  font-size: 17px;
+}

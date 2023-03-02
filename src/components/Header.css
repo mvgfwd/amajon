@@ -1,0 +1,125 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1c1919;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__logonya {
+  width: 120px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 15px;
+}
+
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header_searchInput {
+  width: 100%;
+  height: 12px;
+  padding: 10px;
+  border: none;
+}
+
+.header_searchIkon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #ff9b00;
+}
+
+.header__navigasi {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__opsi {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  color: white;
+}
+
+.header__opsiBarisSatu {
+  font-size: 10px;
+}
+.header__opsiBarisDua {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header__cart {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.header__cartCount {
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+.header__opsinegaraaa {
+  /* display: flex; */
+  margin: 0 10px;
+  color: white;
+  margin-left: 0;
+  margin-right: 15px;
+}
+.header__opsinegara {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.header__opsinegara:hover {
+  color: white;
+  display: flex;
+  align-items: center;
+  scale: 1.03;
+  cursor: pointer;
+}
+
+.header__opsi:hover {
+  scale: 1.03;
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  font-weight: 500;
+  padding-top: 1px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  margin: auto;
+  width: inherit;
+  color: white;
+  background-color: #ff9b00;
+  border: 1px solid;
+  border-radius: 5px 5px 10px 10px;
+  animation: dropdown 0.3s ease-in;
+}
+
+.dropdown__menu ul li {
+  animation: dropdown 0.3s ease-in;
+}
+
+.dropdown__menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translate(0px, -30px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

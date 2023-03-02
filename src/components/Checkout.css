@@ -1,0 +1,21 @@
+.checkout {
+  display: flex;
+  height: max-content;
+  padding: 20px;
+  background-color: white;
+}
+
+.checkout__iklan {
+  width: 100%;
+  margin-bottom: 11px;
+}
+
+.checkout__detail {
+  border-bottom: 1px solid lightgray;
+  padding: 9px;
+  margin-right: 13px;
+}
+
+.checkout__kanan {
+  margin-top: 1rem;
+}

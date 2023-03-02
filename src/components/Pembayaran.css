@@ -1,0 +1,37 @@
+.bayar {
+  background-color: white;
+}
+
+.bayar__totItem h1 {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.bayar__sub {
+  display: flex;
+  padding: 2rem;
+  margin: 0 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bayar__judul {
+  flex: 0.2;
+}
+
+.bayar__addr,
+.bayar__barang,
+.bayar__detail {
+  flex: 0.8;
+}
+
+.inputAddr {
+  padding: 3px;
+  width: 400px;
+  border: 1px solid #666363;
+}
+
+.inputAddr:focus {
+  border: none;
+  background-color: aliceblue;
+}
