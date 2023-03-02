@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { database } from "../firebase";
 
 //stripe punya
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { CardElement } from "@stripe/react-stripe-js";
 
 function Pembayaran() {
   const addrInputRef = useRef();
@@ -18,8 +18,8 @@ function Pembayaran() {
 
   const navigate = useNavigate();
 
-  const stripe = useStripe();
-  const elements = useElements();
+  // const stripe = useStripe();
+  // const elements = useElements();
 
   const [locked, setLocked] = useState(true);
   const [error, setError] = useState(null);
@@ -59,6 +59,7 @@ function Pembayaran() {
         alamat: alamat,
       });
     }
+    setBerhasil(true)
     setProses(true);
     database
       .collection("users")
@@ -75,17 +76,17 @@ function Pembayaran() {
     navigate("/order");
 
     //MASIH GAK JALAN !!!
-    const payload = await stripe
-      .confirmCardPayment(clienSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement),
-        },
-      })
-      .then(({ paymentIntent }) => {
-        setBerhasil(true);
-        setError(null);
-        setProses(false);
-      });
+    // const payload = await stripe
+    //   .confirmCardPayment(clienSecret, {
+    //     payment_method: {
+    //       card: elements.getElement(CardElement),
+    //     },
+    //   })
+    //   .then(({ paymentIntent }) => {
+    //     setBerhasil(true);
+    //     setError(null);
+    //     setProses(false);
+    //   });
   };
 
   const changeHandler = (e) => {

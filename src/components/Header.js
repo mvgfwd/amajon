@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import { Link, useHref } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useStateVal } from "../context/context";
 import { otentikasi } from "../firebase";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -13,8 +13,6 @@ function Header() {
   const dropDownMenus = () => {
     setShowMenu((prev) => !prev);
   };
-
-  const menus = ["instagram", "facebook", "linkedin"];
 
   const [{ cart, user }] = useStateVal();
 
@@ -81,7 +79,7 @@ function Header() {
             >
               <ul style={{ listStyle: "none" }}>
                 <li style={{ marginTop: "10px", marginLeft: "-30px" }}>
-                  <a
+                  <a rel="noreferrer"
                     href="https://www.instagram.com/yonathan.sb/"
                     target="_blank"
                   >
@@ -90,13 +88,14 @@ function Header() {
                 </li>
                 <li style={{ marginTop: "10px", marginLeft: "-30px" }}>
                   {" "}
-                  <a href="https://www.facebook.com/JoGoToSky" target="_blank">
+                  <a  rel="noreferrer" href="https://www.facebook.com/JoGoToSky" target="_blank">
                     Facebook
                   </a>
                 </li>
                 <li style={{ marginTop: "10px", marginLeft: "-30px" }}>
                   {" "}
                   <a
+                  rel="noreferrer"
                     href="https://www.linkedin.com/in/yonathan-simbolon-850229221/"
                     target="_blank"
                   >
