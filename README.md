@@ -24,6 +24,7 @@ on Development Feature:
 2. Order Tab
 3. Deliver Country Tab
 4. Footer Feature
+5. Not Auto Close drop-down menu when page clicked
 
 Error Feature:
 1. React Currency Format
