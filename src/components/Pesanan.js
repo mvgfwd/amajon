@@ -48,6 +48,7 @@ function Pesanan() {
         </div>
         {cart.map((e) => (
           <COutProduct
+            key={e.id}
             id={e.id}
             gambar={e.gambar}
             judul={e.judul}

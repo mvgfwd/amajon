@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  margin-bottom: 15px;
 }
 
 .login__information h1 {
@@ -47,8 +48,32 @@
 .login__button {
   height: 28px;
   background: #ff9b00;
+  color: #0a0a0a;
   border-color: #a88734 #846a28 #9c7e31;
   width: 97%;
   border-radius: 3px;
   margin-top: 5px;
+}
+
+.login__button:hover {
+  background: #df8600;
+  color: #000;
+}
+
+.notifikasi__daftar__sukses {
+  border: 2px solid green;
+  padding: 2px 10px;
+  color: #0a0a0a;
+  border-radius: 4px;
+  background-color: rgba(0, 128, 0, 0.11);
+  font-size: 14px;
+}
+
+.notifikasi__daftar__gagal {
+  border: 2px solid red;
+  color: #0a0a0a;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 0, 0, 0.11);
+  font-size: 14px;
 }

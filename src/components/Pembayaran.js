@@ -38,8 +38,6 @@ function Pembayaran() {
     getKlienSec();
   }, [cart]);
 
-  console.log("Client Secret = ", clienSecret);
-
   const submitHandler = async (e) => {
     e.preventDefault();
     const alamat = addrInputRef.current.value;
@@ -59,7 +57,7 @@ function Pembayaran() {
         alamat: alamat,
       });
     }
-    setBerhasil(true)
+    setBerhasil(true);
     setProses(true);
     database
       .collection("users")
@@ -144,7 +142,7 @@ function Pembayaran() {
               <CardElement onChange={changeHandler} />
               <div className="bayar__harga">
                 <h3>Total Order = {totalHargaCart(cart)}</h3>
-                  
+
                 <button disabled={locked || proses || berhasil}>
                   {" "}
                   {proses ? <p>Processing</p> : "Buy Now!"}{" "}

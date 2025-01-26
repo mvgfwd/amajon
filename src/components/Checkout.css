@@ -16,6 +16,21 @@
   margin-right: 13px;
 }
 
+.checkout__detail h2 {
+  color: #333;
+}
+
+.checkout__detail h4 {
+  color: #888;
+}
+
+.checkout__detail h4 span {
+  color: #222;
+  font-weight: 800;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .checkout__kanan {
   margin-top: 1rem;
 }

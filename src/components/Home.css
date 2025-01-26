@@ -4,6 +4,21 @@
   max-width: 1499px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+.cart__notif {
+  position: fixed;
+  top: 74px;
+  right: 20px;
+  z-index: 10;
+  border: 2px solid rgb(0, 105, 0);
+  border-radius: 4px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  padding: 4px 10px;
+  background-color: rgba(0, 128, 0, 0.8);
 }
 
 .home__prodRow {

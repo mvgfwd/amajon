@@ -3,11 +3,17 @@ import "./LoginPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { otentikasi } from "../firebase";
+import { useState } from "react";
 
 function Login() {
   const navigate = useNavigate();
   const emailInputRef = useRef();
   const passInputRef = useRef();
+  const [isNotifShow, setIsNotifShow] = useState({
+    isShow: false,
+    msg: "",
+    success: false,
+  });
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -19,23 +25,57 @@ function Login() {
       .then((otentik) => {
         navigate("/");
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => {
+        setIsNotifShow({
+          isShow: true,
+          msg: err.message,
+          success: false,
+        });
+        emailInputRef.current.value = "";
+        passInputRef.current.value = "";
+      });
   };
 
   const registerAcc = (e) => {
     e.preventDefault();
     const email = emailInputRef.current.value;
     const pass = passInputRef.current.value;
-    //validasi tipis-tipis
+    // validasi tipis-tipis
     if (!email.includes("@")) {
-      alert("Email From Another Galaxy?");
+      setIsNotifShow({
+        isShow: true,
+        msg: "Put a Legit Email Please!",
+        success: false,
+      });
+      return;
+    }
+    if (!email || !pass) {
+      setIsNotifShow({
+        isShow: true,
+        msg: "You need to fill email & password to register",
+        success: false,
+      });
       return;
     }
     //bantuan 3rd party firebase
     otentikasi
       .createUserWithEmailAndPassword(email, pass)
-      .then((otentikasi) => console.log(otentikasi))
-      .catch((err) => alert(err.message));
+      .then((otentikasi) => {
+        setIsNotifShow({
+          isShow: true,
+          msg: "Registrasi Sukses. Go Login Now Fellas!",
+          success: true,
+        });
+        emailInputRef.current.value = "";
+        passInputRef.current.value = "";
+      })
+      .catch((err) => {
+        setIsNotifShow({
+          isShow: true,
+          msg: "Registrasi gagal",
+          success: false,
+        });
+      });
   };
 
   return (
@@ -51,11 +91,11 @@ function Login() {
       <div className="login__information">
         <h1>Sign-in</h1>
         <form>
-          <label for="email">
+          <label htmlFor="email">
             <h5>Email</h5>
           </label>
           <input type="text" id="email" ref={emailInputRef} />
-          <label for="password">
+          <label htmlFor="password">
             <h5>Password</h5>
           </label>
           <input type="password" id="password" ref={passInputRef} />
@@ -74,6 +114,20 @@ function Login() {
           Buat Akun
         </button>
       </div>
+      {isNotifShow.isShow && (
+        <div
+          onClick={() =>
+            setIsNotifShow({ isShow: false, msg: "", success: true })
+          }
+          className={`${
+            isNotifShow.success
+              ? "notifikasi__daftar__sukses"
+              : "notifikasi__daftar__gagal"
+          }`}
+        >
+          <span>{isNotifShow.msg}</span>
+        </div>
+      )}
     </div>
   );
 }

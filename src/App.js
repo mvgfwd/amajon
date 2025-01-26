@@ -23,7 +23,6 @@ function App() {
 
   useEffect(() => {
     otentikasi.onAuthStateChanged((authUser) => {
-      console.log("user saat ini =", authUser);
       if (authUser) {
         dispatch({
           type: "SET_USER",
@@ -42,16 +41,29 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/" element={[<Header />, <Home />]} />
-          <Route path="login" element={<Login />} />
-          <Route path="/check-out" element={[<Header />, <Checkout />]} />
-          <Route path="/order" element={[<Header />, <Pesanan />]} />
           <Route
+            path="/"
+            key={1}
+            element={[<Header key={"header"} />, <Home key={"home"} />]}
+          />
+          <Route path="login" key={2} element={<Login />} />
+          <Route
+            path="/check-out"
+            key={3}
+            element={[<Header key={"header"} />, <Checkout key={"checkout"} />]}
+          />
+          <Route
+            path="/order"
+            key={4}
+            element={[<Header key={"header"} />, <Pesanan key={"pesanan"} />]}
+          />
+          <Route
+            key={5}
             path="/pembayaran"
             element={[
-              <Header />,
-              <Elements stripe={promise}>
-                <Pembayaran />
+              <Header key={"header"} />,
+              <Elements key={"element"} stripe={promise}>
+                <Pembayaran key={"pembayaran"} />
               </Elements>,
             ]}
           />

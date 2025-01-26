@@ -16,7 +16,9 @@ function Checkout() {
           src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
         />
         <div className="checkout__detail">
-          <h4>Hallo {user?.email}</h4>
+          <h4>
+            Hallo <span>{user?.email}</span>
+          </h4>
           <h2>Your Belanjaan</h2>
           {cart.map((e) => (
             <COutProduct

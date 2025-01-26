@@ -78,24 +78,38 @@ function Header() {
               style={{ position: "absolute", marginTop: "5px" }}
             >
               <ul style={{ listStyle: "none" }}>
-                <li style={{ marginTop: "10px", marginLeft: "-30px" }}>
-                  <a rel="noreferrer"
+                <li
+                  key={"instagram"}
+                  style={{ marginTop: "10px", marginLeft: "-30px" }}
+                >
+                  <a
+                    rel="noreferrer"
                     href="https://www.instagram.com/yonathan.sb/"
                     target="_blank"
                   >
                     Instagram
                   </a>
                 </li>
-                <li style={{ marginTop: "10px", marginLeft: "-30px" }}>
+                <li
+                  key={"facebook"}
+                  style={{ marginTop: "10px", marginLeft: "-30px" }}
+                >
                   {" "}
-                  <a  rel="noreferrer" href="https://www.facebook.com/JoGoToSky" target="_blank">
+                  <a
+                    rel="noreferrer"
+                    href="https://www.facebook.com/JoGoToSky"
+                    target="_blank"
+                  >
                     Facebook
                   </a>
                 </li>
-                <li style={{ marginTop: "10px", marginLeft: "-30px" }}>
+                <li
+                  key={"linkedin"}
+                  style={{ marginTop: "10px", marginLeft: "-30px" }}
+                >
                   {" "}
                   <a
-                  rel="noreferrer"
+                    rel="noreferrer"
                     href="https://www.linkedin.com/in/yonathan-simbolon-850229221/"
                     target="_blank"
                   >
