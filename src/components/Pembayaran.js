@@ -34,9 +34,10 @@ function Pembayaran() {
         method: "post",
       });
       setClienSecret(response.data.clienSecret);
+      console.log(clienSecret);
     };
     getKlienSec();
-  }, [cart]);
+  }, [clienSecret, cart]);
 
   const submitHandler = async (e) => {
     e.preventDefault();

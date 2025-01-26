@@ -5,10 +5,11 @@ import { Products } from "./Home.service";
 import { useStateVal } from "../context/context";
 
 function Home() {
-  const [isCartNotif, setIsCartNotif] = useState(true);
+  const [isCartNotif, setIsCartNotif] = useState(false);
   const [{ cart }] = useStateVal();
 
   useEffect(() => {
+    if (cart.length === 0) return;
     onClickAddedToChart();
   }, [cart]);
 
